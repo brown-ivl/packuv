@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>PackUV | Packed Gaussian UV Maps for 4D Volumetric Video</title>
+  <title>PackUV</title>
   <link rel="shortcut icon" href="./asset/images/block.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -31,6 +31,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
 </head>
 <body>
+
+<!-- IVL Navbar -->
+<nav class="ivl-navbar">
+  <div class="ivl-navbar-container">
+    <a class="ivl-navbar-brand" href="https://ivl.cs.brown.edu">
+      <img class="ivl-navbar-logo" src="https://ivl.cs.brown.edu/assets/images/icons/brown_logo.png" alt="Brown IVL Logo" />
+      <span>Brown IVL</span>
+    </a>
+    <div class="ivl-navbar-links">
+      <a class="ivl-nav-link" href="https://ivl.cs.brown.edu/">Home</a>
+      <a class="ivl-nav-link" href="https://ivl.cs.brown.edu/research.html">Publications</a>
+      <a class="ivl-nav-link" href="https://ivl.cs.brown.edu/people.html">People</a>
+      <a class="ivl-nav-link" href="https://ivl.cs.brown.edu/teaching.html">Teaching</a>
+      <a class="ivl-nav-link" href="https://ivl.cs.brown.edu/openings.html">Openings</a>
+    </div>
+  </div>
+</nav>
 
 <!-- Animated Background -->
 <div class="animated-bg"></div>
@@ -60,9 +77,9 @@
                 <span class="affiliation-sep">•</span>
                 <span class="affiliation"><sup>2</sup>UMass Amherst</span>
                 <span class="affiliation-sep">•</span>
-                <span class="affiliation"><sup>3</sup>Meta Reality Labs</span>
+                <span class="affiliation"><sup>3</sup>Meta</span>
               </div>
-              <div class="title-badge" style="margin-top: 1.5rem;">2025</div>
+              <div class="title-badge" style="margin-top: 1.5rem;">CVPR 2026</div>
             </div>
 
                   <div class="column has-text-centered">
@@ -108,7 +125,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (TBD)</span>
                   </a>
                 </span>
 
@@ -146,11 +163,6 @@
             </li>
             <li class="carousel-slide">
               <video poster="" autoplay controls muted loop playsinline>
-                <source src="asset/videos/carousel/result_3.mp4" type="video/mp4">
-              </video>
-            </li>
-            <li class="carousel-slide">
-              <video poster="" autoplay controls muted loop playsinline>
                 <source src="asset/videos/carousel/result_4.mp4" type="video/mp4">
               </video>
             </li>
@@ -172,6 +184,11 @@
             <li class="carousel-slide">
               <video poster="" autoplay controls muted loop playsinline>
                 <source src="asset/videos/carousel/result_2.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_3.mp4" type="video/mp4">
               </video>
             </li>
           </ul>
@@ -214,12 +231,12 @@
             a temporally consistent fitting method that directly optimizes Gaussian parameters in the UV domain. 
             A flow-guided Gaussian labeling and video keyframing module identifies dynamic Gaussians, stabilizes static regions, 
             and preserves temporal coherence even under large motions and disocclusions. 
-            The resulting UV atlas format is the first unified volumetric video representation compatible with standard video codecs 
-            (e.g., HEVC, FFV1) without quality loss, <strong>enabling efficient streaming</strong> within existing multimedia infrastructure. 
+            The resulting UV atlas format is the <strong>first unified volumetric video representation</strong> compatible with standard video codecs (e.g., FFV1) without losing quality, 
+            <strong>enabling efficient streaming</strong> within existing multimedia infrastructure. 
             </p>
 
             <p>To evaluate long-duration volumetric capture, we present <span class="highlight-inline">PackUV-2B</span>, the <strong>largest multi-view video dataset to date</strong>, 
-            featuring more than 50 synchronized 360 cameras, substantial motion, and frequent disocclusions across 100 sequences and 2B (billion) frames. 
+            featuring more than 50 synchronized cameras, substantial motion, and frequent disocclusions across 100 sequences and 2B (billion) frames. 
             Extensive experiments demonstrate that our method surpasses existing baselines in rendering fidelity while scaling to sequences up to 30 minutes with consistent quality.
           </p>
           </div>
@@ -353,10 +370,10 @@
         </h2>
       </div>
       <div class="bibtex-card">
-      <pre><code>@misc{rai2025packuv,
+      <pre><code>@misc{rai2026packuv,
     title={PackUV: Packed Gaussian UV Maps for 4D Volumetric Video}, 
     author={Aashish Rai, Angela Xing, Anushka Agarwal, Xiaoyan Cong, Zekun Li, Tao Lu, Aayush Prakash, Srinath Sridhar},
-    year={2025},
+    year={CVPR 2026},
     eprint={xxx-xxx},
     archivePrefix={xxx-xxx},
     primaryClass={xxx-xxx},
