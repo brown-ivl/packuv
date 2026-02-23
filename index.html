@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="PackUV: Packed Gaussian UV Maps for 4D Volumetric Video">
+  <meta name="keywords" content="Gaussian Splatting, Immersive videos, Compression, 4D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PackUV | Packed Gaussian UV Maps for 4D Volumetric Video</title>
+  <link rel="shortcut icon" href="./asset/images/block.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
+</head>
+<body>
+
+<!-- Animated Background -->
+<div class="animated-bg"></div>
+
+  <section class="hero hero-gradient">
+    <div class="hero-body hero-custom">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title main-title" style="margin-bottom: 2rem;"><span class="gradient-text">PackUV:</span> Packed <span class="highlight-text">Gaussian UV Maps</span> for <br> 4D Volumetric Video</h1>
+            <div class="is-size-5 publication-authors authors-grid">
+              <!-- Paper authors -->
+              <div class="author-row">
+                <span class="author-block"><a href="https://aashishrai3799.github.io" target="_blank">Aashish Rai<sup>1</sup></a></span>
+                <span class="author-block"><a href="https://xing-angela.github.io" target="_blank">Angela Xing<sup>1</sup></a></span>
+                <span class="author-block"><a href="https://anushka17agarwal.github.io" target="_blank">Anushka Agarwal<sup>2</sup></a></span>
+                <span class="author-block"><a href="https://oliver-cong02.github.io" target="_blank">Xiaoyan Cong<sup>1</sup></a></span>
+                <span class="author-block"><a href="https://kunkun0w0.github.io" target="_blank">Zekun Li<sup>1</sup></a></span>
+              </div>
+              <div class="author-row">
+                <span class="author-block"><a href="https://inspirelt.github.io" target="_blank">Tao Lu<sup>1</sup></a></span>
+                <span class="author-block"><a href="https://aayushp.github.io" target="_blank">Aayush Prakash<sup>3</sup></a></span>
+                <span class="author-block"><a href="https://cs.brown.edu/people/ssrinath" target="_blank">Srinath Sridhar<sup>1</sup></a></span>
+              </div>
+              <div class="affiliations">
+                <span class="affiliation"><sup>1</sup>Brown University</span>
+                <span class="affiliation-sep">•</span>
+                <span class="affiliation"><sup>2</sup>UMass Amherst</span>
+                <span class="affiliation-sep">•</span>
+                <span class="affiliation"><sup>3</sup>Meta Reality Labs</span>
+              </div>
+              <div class="title-badge" style="margin-top: 1.5rem;">2025</div>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links fancy-buttons">
+                  
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="./asset/packuv.pdf"
+                      class="external-link button is-medium is-rounded fancy-btn btn-pdf">
+                      <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>PDF</span>
+                    </a>
+                  </span>
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                      <a href="./asset/available_soon.html" target="_blank"
+                      class="external-link button is-medium is-rounded fancy-btn btn-arxiv">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Video Link. -->
+                  <span class="link-block">
+                    <a href="./asset/available_soon.html"
+                      class="external-link button is-medium is-rounded fancy-btn btn-video">
+                      <span class="icon">
+                          <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="./asset/available_soon.html" target="_blank"
+                    class="external-link button is-medium is-rounded fancy-btn btn-code">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Video Carousel -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <h2 class="title is-3">Results</h2> -->
+      </div>
+      <div class="custom-carousel">
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <li class="carousel-slide current-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_1.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_8.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_3.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_4.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_5.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_6.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_7.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline>
+                <source src="asset/videos/carousel/result_2.mp4" type="video/mp4">
+              </video>
+            </li>
+          </ul>
+        </div>
+        <button class="carousel-button carousel-button--left is-hidden">
+          <span class="icon is-large">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+        </button>
+        <button class="carousel-button carousel-button--right">
+          <span class="icon is-large">
+            <i class="fas fa-chevron-right"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+<!-- Paper abstract -->
+<section class="section abstract-section">
+  <div style="max-width: 80%; margin: 0 auto; padding: 0 1.5rem;">
+    <div class="abstract-box">
+          <h2 class="title is-2 section-title">
+            <span class="title-icon">📄</span> Abstract
+          </h2>
+          <div class="content has-text-justified abstract-content">
+          <p>
+            <strong>Volumetric videos</strong> offer immersive 4D experiences, but remain difficult to reconstruct, store, and stream at scale. 
+            Existing Gaussian Splatting based methods achieve high-quality reconstruction but break down on long sequences, temporal inconsistency, 
+            and fail under large motions and disocclusions. Moreover, their outputs are typically incompatible with conventional video coding pipelines, 
+            preventing practical applications.</p>
+            
+            <p>We introduce <span class="highlight-inline">PackUV</span>, a novel 4D Gaussian representation that maps all Gaussian attributes into a sequence of structured, 
+            multi-scale UV atlas, enabling compact, image-native storage.
+            To fit this representation from multi-view videos, we propose <span class="highlight-inline">PackUV-GS</span>, 
+            a temporally consistent fitting method that directly optimizes Gaussian parameters in the UV domain. 
+            A flow-guided Gaussian labeling and video keyframing module identifies dynamic Gaussians, stabilizes static regions, 
+            and preserves temporal coherence even under large motions and disocclusions. 
+            The resulting UV atlas format is the first unified volumetric video representation compatible with standard video codecs 
+            (e.g., HEVC, FFV1) without quality loss, <strong>enabling efficient streaming</strong> within existing multimedia infrastructure. 
+            </p>
+
+            <p>To evaluate long-duration volumetric capture, we present <span class="highlight-inline">PackUV-2B</span>, the <strong>largest multi-view video dataset to date</strong>, 
+            featuring more than 50 synchronized 360 cameras, substantial motion, and frequent disocclusions across 100 sequences and 2B (billion) frames. 
+            Extensive experiments demonstrate that our method surpasses existing baselines in rendering fidelity while scaling to sequences up to 30 minutes with consistent quality.
+          </p>
+          </div>
+        </div>
+    </div>
+
+    <div style="width: 70%; height: auto; margin: 0 auto; margin-top: 3rem;">
+      <div class="hero-body">
+        <div class="image-container-fancy">
+          <img src="asset/images/teaser.jpg" alt="teaser" class="teaser-image" style="width: 100%; height: auto; border-radius: 18px;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+  <section class="section feature-section">
+    <div style="width: 60%; height: auto; margin: 0 auto;">
+
+      <div class="feature-header">
+        <h2 class="title is-3 section-title">
+          <span class="title-icon">📊</span> Baseline Comparison
+        </h2>
+      </div>
+      <div class="column">
+          <!-- Method Selector -->
+          <div class="method-selector-container">
+            <div class="method-buttons">
+              <button class="method-btn" data-method="gifstream">GIFStream</button>
+              <button class="method-btn" data-method="4dgs">4DGS</button>
+              <button class="method-btn" data-method="atgs">ATGS</button>
+              <button class="method-btn" data-method="deformable">Deformable</button>
+              <button class="method-btn" data-method="ex4dgs">Ex4DGS</button>
+              <button class="method-btn" data-method="grid4d">Grid4D</button>
+              <button class="method-btn" data-method="realtime">Realtime</button>
+              <button class="method-btn active" data-method="3dgstream">3DGStream</button>
+            </div>
+          </div>
+
+          <!-- Slider Container -->
+          <div class="slider-container">
+            <video class="bottom-video" autoplay muted loop>
+              <source src="asset/videos/ours_entering.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video class="top-video" autoplay muted loop id="comparison-video">
+              <source src="asset/videos/3dgstream_entering.mp4" type="video/mp4" id="comparison-source">
+              Your browser does not support the video tag.
+            </video>
+            <div class="slider"></div>
+            <div class="caption caption-left" id="method-label">3DGStream</div>
+            <div class="caption caption-right">OURS</div>
+          </div>
+      </div>
+
+  </div>
+</section>
+
+
+<!-- Dataset -->
+<section class="section feature-section">
+  <div style="max-width: 70%; margin: 0 auto; padding: 0 1.5rem;">
+    <div class="feature-header">
+      <h2 class="title is-3 section-title">
+        <span class="title-icon">🗂️</span> PackUV-2B Dataset
+      </h2>
+      <div class="content has-text-justified">
+        <p>
+          To better showcase the abilities of our representation and compare it with existing work, we captured the largest long-duration multi-view video dataset, <span class="highlight-inline">PackUV-2B</span>. 
+          PackUV-2B features real-world dynamic scenes with more than 50 synchronized cameras, providing 360<sup>◦</sup> coverage in both controlled studio and uncontrolled in-the-wild settings.
+        </p>
+      </div>
+    </div>
+
+    <div style="width: 100%; height: auto; margin: 0 auto;">
+              <div class="hero-body">
+                <video controls autoplay muted loop playsinline style="width: 100%; height: auto;">
+                  <source src="asset/videos/packuv_dataset.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+  </div>
+</section>
+<!-- End Dataset -->
+
+
+
+
+<!-- Long Video -->
+<section class="section feature-section">
+  <div style="max-width: 60%; margin: 0 auto; padding: 0 1.5rem;">
+    <div class="feature-header">
+      <h2 class="title is-3 section-title">
+        <span class="title-icon">🎬</span> Long Video
+      </h2>
+      <div class="content has-text-justified">
+        <p>
+          To showcase the scalability of our method, we play a long video sequence lasting <span class="highlight-inline">30 minutes</span> featuring complex human motions in a dynamic environment. The video is played at 30x speed.
+        </p>
+      </div>
+    </div>
+
+    <div style="width: 100%; height: auto; margin: 0 auto;">
+              <div class="hero-body">
+                <video controls autoplay muted loop playsinline style="width: 100%; height: auto;">
+                  <source src="asset/videos/packuv_long.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+  </div>
+</section>
+<!-- End Dataset -->
+
+
+
+
+
+
+<!--BibTex citation -->
+  <section class="section bibtex-section" id="BibTeX">
+    <div style="max-width: 60%; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="feature-header">
+        <h2 class="title is-3 section-title">
+          <span class="title-icon">📖</span> Citation
+        </h2>
+      </div>
+      <div class="bibtex-card">
+      <pre><code>@misc{rai2025packuv,
+    title={PackUV: Packed Gaussian UV Maps for 4D Volumetric Video}, 
+    author={Aashish Rai, Angela Xing, Anushka Agarwal, Xiaoyan Cong, Zekun Li, Tao Lu, Aayush Prakash, Srinath Sridhar},
+    year={2025},
+    eprint={xxx-xxx},
+    archivePrefix={xxx-xxx},
+    primaryClass={xxx-xxx},
+    url={xxx-xxx}, 
+}</code></pre>
+      </div>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer fancy-footer">
+  <div class="container">
+    <div class="content has-text-centered footer-content">
+      <div class="footer-text">
+        <p class="footer-credit">
+          This webpage builds on 
+          <a href="https://ivl.cs.brown.edu/uvgs" target="_blank">UVGS</a>.
+        </p>
+        <p class="footer-copyright">© Brown IVL • All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+  </html>
